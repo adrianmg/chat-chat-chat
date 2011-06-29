@@ -4,7 +4,7 @@
 
 // Server data
 
-var server			= "213.60.69.67:3000";
+var server			= "your_host:port"; // example: localhost:3000 || other example: 210.23.24.25:3000
 var serverMount		= "faye";
 var chatChannel		= "/chat";
 
@@ -12,6 +12,7 @@ var chatChannel		= "/chat";
 
 var chat			= $("#chat");
 var message			= $("#message");
+var submit			= $("#submit");
 var conversation	= $("#container ul");
 var nicknameDefault	= "anonymous";
 var nickname		= nicknameDefault;
@@ -29,7 +30,6 @@ var client			= new Faye.Client('http://' + server + '/' + serverMount );
 
 client.connect(function(){
 	pushNotification(nickname);
-	console.log("someone connected");
 });
 
 // Subscribe to channel & set update actions
@@ -45,6 +45,10 @@ client.subscribe(chatChannel, function(response) {
 **********************************************/
 
 $(document).ready(function() {
+	// put off "disabled" mode on form elements
+	message.removeAttr('disabled');
+	submit.removeAttr('disabled');
+	
 	message.focus(); // Put focus on chat input
 
 	// Request for a nickname
@@ -78,12 +82,16 @@ var pushMessage = function(message, nickname) {
 	this.message.val(""); // empty the input
 }
 
-// Notify to all connected users when new user joins
+// Notify to all when new user joins
 
 var pushNotification = function(nickname) {
-	var message = "has join the channel";
+	var message	= "has join the channel";
 	client.publish(chatChannel, {msg: message, nick: nickname});
 }
+
+// Notify to all when user leaves
+
+/* todo */
 
 // Update the list of messages
 
