@@ -4,7 +4,7 @@
 
 // Server data
 
-var server			= "your_host:port"; // example: localhost:3000 || other example: 210.23.24.25:3000
+var server			= "localhost:3000"; // example: localhost:3000 || other example: 210.23.24.25:3000
 var serverMount		= "faye";
 var chatChannel		= "/chat";
 
