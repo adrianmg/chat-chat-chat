@@ -1,0 +1,29 @@
+body {
+  padding: 10px 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a { color: #00B7FF; }
+
+p { margin-bottom: 50px; }
+
+#container ul {
+	width: 500px;
+	height: 200px;
+	border: 1px solid #eee;
+	background: #fbfbfb;
+	overflow-y: scroll;
+	font-size: 12px;
+	list-style-position: inside;
+	list-style: none;
+	padding: 0;
+	margin: 10px;
+}
+#container ul li {
+	margin: 0 0 10px;
+}
+
+#message {
+	width: 380px;
+	margin-left: 10px;
+}

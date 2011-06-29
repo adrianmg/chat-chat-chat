@@ -1,0 +1,38 @@
+/******************************************************
+ * INSTRUCTIONS: HOW IT WORKS?
+******************************************************/
+
+
+1º -->	make sure you have node.js installed
+
+	https://github.com/joyent/node/wiki/Installation
+
+
+------------------------------------------------------
+
+
+2º -->	install express.js http://expressjs.com
+
+	using npm just execute: "npm install express"
+
+
+------------------------------------------------------	
+
+
+3º -->	install faye.js
+
+	using npm just execute: "npm install faye"
+
+
+------------------------------------------------------
+
+
+4º -->	just run the app!
+	
+	execude "node app.js"
+	
+	
+------------------------------------------------------
+
+
+Enjoy it!

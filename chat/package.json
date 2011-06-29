@@ -1,0 +1,10 @@
+{
+    "name": "chat"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.3.12"
+    , "default": ">= 0.0.1"
+    , "ejs": ">= 0.0.1"
+  }
+}

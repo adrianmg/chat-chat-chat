@@ -1,0 +1,30 @@
+/**********************************************
+ * AUTHOR
+**********************************************/
+
+author:		Adrian Mato
+
+twitter:	@adrianmg
+
+e-mail:		yensamg@gmail.com
+
+
+
+/**********************************************
+ * ABOUT chat-chat-chat
+**********************************************/
+
+Hi guys! First time working with node.js just want to make sure I can do little things with it so I have used:
+
+	- node.js
+	- express.js
+	- faye.js
+	
+
+I'm a ux / design guy and it's my first public release on GitHub, but I hope you like it and find it useful.
+
+
+
+Comments and improvements will be really appreciated,
+
+Cheers!
