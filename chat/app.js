@@ -3,18 +3,18 @@
  * Module dependencies.
  */
 
-var express =	require('express');
-var faye 	= 	require('faye');
+var express	=	require('express');
+var faye	= 	require('faye');
 
 // http server
-var app 	=	express.createServer();
+var app		=	express.createServer();
+var port	=	3000; // configure as you wish
 
 // faye server
 var bayeux	=	new faye.NodeAdapter({
 	mount:		'/faye',
 	timeout:	45
 });
-
 
 // app configuration
 
@@ -30,19 +30,19 @@ app.configure(function(){
 });
 
 app.configure('development', function(){
-  app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+	app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+	app.use(express.errorHandler()); 
 });
 
 // Routes http
 
 app.get('/', function(req, res){
-  res.render('index', {
-    title: 'chat-chat-chat'
-  });
+	res.render('index', {
+		title: 'chat-chat-chat'
+	});
 });
 
 // Get clients bayeux
@@ -53,7 +53,7 @@ bayeux.getClient(function(){
 
 // Listeners
 bayeux.attach(app);
-app.listen(3000);
+app.listen(port);
 
 
 // Notice starting log
